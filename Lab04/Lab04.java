@@ -31,6 +31,7 @@ public class Lab04 {
         //showTwos(2);
         
         //pascalTriangle();
+        //toBinary(44);
     }
     
     public static double fractionSum() {
@@ -79,7 +80,27 @@ public class Lab04 {
         System.out.print("How many lines of the pascal triangle would you like to print? ");
         int n = input.nextInt();
         
-        
+        for (int i = 0; i < n; ++i) {
+            for (int k = (n-i); k >= 0; --k)
+            {
+                System.out.print("    ");
+            }
+            for (int j = 0; j < (i+1); ++j) {
+                int place = fact(i) / (fact(j)*fact(i - j));
+                System.out.print(place);
+                System.out.print("        ");
+            }
+            System.out.println("");
+        }
+    }
+    
+    public static int fact(int n) {
+        if (n == 0) {
+            return 1;
+        }
+        else {
+            return n * fact(n - 1);
+        }
     }
     
     public static void showTwos(int n) {
@@ -91,5 +112,32 @@ public class Lab04 {
         }
         
         System.out.println(n);
+    }
+    
+    public static void toBinary(int n) {
+        String bin = "";
+        
+        while(n != 0) {
+            if (n % 2 == 0) {
+                bin = 0 + bin;
+            }
+            else {
+                bin = 1 + bin;
+            }
+            n /= 2;
+        }
+        
+        System.out.println(bin);
+    }
+    
+    public static void pigLatin() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter String: ");
+        String n = input.next();
+        
+        while (!(n.equals("-1"))) {
+            
+            n = input.next();
+        }
     }
 }
