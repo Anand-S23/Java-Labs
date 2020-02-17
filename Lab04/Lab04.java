@@ -18,22 +18,25 @@ public class Lab04 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        //System.out.println("The sum is " + fractionSum());
+        System.out.println("The sum is " + fractionSum());
         
-        //Scanner input = new Scanner(System.in);
-        //System.out.print("How many numbers would you like to enter? ");
-        //int n = input.nextInt();
-        //smallestLargest(n);
+        Scanner input = new Scanner(System.in);
+        System.out.print("How many numbers would you like to enter? ");
+        int n = input.nextInt();
+        smallestLargest(n);
         
-        //showTwos(10);
-        //showTwos(3);
-        //showTwos(1);
-        //showTwos(2);
+        showTwos(10);
+        showTwos(3);
+        showTwos(1);
+        showTwos(2);
         
-        //pascalTriangle();
-        //toBinary(44);
+        pascalTriangle();
+        toBinary(44);
+        
+        pigLatin();
     }
     
+    // Takes ing number from user, return a double of the sum of the fraction
     public static double fractionSum() {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter n: ");
@@ -52,6 +55,7 @@ public class Lab04 {
         return sum;
     }
     
+    // Takes in x number of number from user and prints out min and max (returns )
     public static void smallestLargest(int n) {
         Scanner input = new Scanner(System.in);
         int smallest = 0;
@@ -75,6 +79,7 @@ public class Lab04 {
         System.out.println("Largest = " + largest);
     }
     
+    // Takes in int x and prints out x lines of the triangle
     public static void pascalTriangle() {
         Scanner input = new Scanner(System.in);
         System.out.print("How many lines of the pascal triangle would you like to print? ");
@@ -132,12 +137,29 @@ public class Lab04 {
     
     public static void pigLatin() {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter String: ");
+        System.out.print("Enter word: ");
         String n = input.next();
         
+        String finalString = "";
+        
         while (!(n.equals("-1"))) {
+            for (int i = 0; i < n.length(); ++i) {
+                if (n.charAt(i) == 'A' || n.charAt(i) == 'E' || n.charAt(i) == 'I' ||
+                        n.charAt(i) == 'O' || n.charAt(i) == 'U' || n.charAt(i) == 'a' || 
+                        n.charAt(i) == 'e' || n.charAt(i) == 'i' || n.charAt(i) == 'o' ||
+                        n.charAt(i) == 'u') {
+                    String sub = n.substring(i);
+                    String begin = n.substring(0, i);
+                    String full = sub + "-" + begin + "ay ";
+                    finalString += full;
+                    break;
+                }
+            }
             
+            System.out.print("Enter word: ");
             n = input.next();
         }
+        
+        System.out.println(finalString);
     }
 }
