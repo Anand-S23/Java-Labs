@@ -32,4 +32,12 @@ public class Cone implements Shape {
     public String toString() {
         return "Cone {height: " + height + ", radius: " + radius + "}";
     }
+    
+    public double getHeight() {
+        return height; 
+    }
+    
+    public double getRadius() {
+        return radius;
+    }
 }

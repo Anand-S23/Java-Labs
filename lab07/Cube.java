@@ -26,7 +26,12 @@ public class Cube implements Shape{
         return Math.pow(side, 3);
     }
     
+    @Override
     public String toString() {
         return "Cube {side length: " + side + "}";
+    }
+    
+    public double getSideLength() {
+        return side;
     }
 }

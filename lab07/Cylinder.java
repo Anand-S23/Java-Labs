@@ -32,4 +32,12 @@ public class Cylinder implements Shape {
     public String toString() {
         return "Cylinder {height: " + height + ", radius: " + radius + "}";
     }
+    
+    public double getHeight() {
+        return height; 
+    }
+    
+    public double getRadius() {
+        return radius;
+    }
 }

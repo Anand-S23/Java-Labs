@@ -30,4 +30,8 @@ public class Sphere implements Shape {
     public String toString() {
         return "Sphere {radius: " + radius + "}";
     }
+    
+    public double getRadius() {
+        return radius;
+    }
 }
