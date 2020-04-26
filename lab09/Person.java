@@ -84,7 +84,7 @@ public class Person {
     @Override
     public String toString() {
         return "FirstName:\t" + firstName + "\nLast Name:\t" + lastName +
-                "\nAddress:\t" + address + "\nCity:\t" + city + "\nState:\t" + 
+                "\nAddress:\t" + address + "\nCity:\t\t" + city + "\nState:\t\t" + 
                 state + "\nZipCode:\t" + zipcode;
     }
 }

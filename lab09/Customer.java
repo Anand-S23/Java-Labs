@@ -70,8 +70,10 @@ public class Customer extends Person implements Comparable<Customer> {
     
     public void copyCSV(String csv){
         String [] fields = csv.split(",");
+        //System.out.println(fields[3]);
         this.copy(fields[0], fields[1], fields[2], fields[3], fields[4], 
                 fields[5], fields[6], fields[7]);
+        //System.out.println(this);
     }
 
     // returns a csv formated string
@@ -82,7 +84,7 @@ public class Customer extends Person implements Comparable<Customer> {
     @Override
     public String toString(){
         return "CustomerID:\t" + customerID + "\nGrossSales:\t" + grossSales 
-                + "\n" + super.toString();
+                + "\n" + super.toString() + "\n";
     }
     
     @Override
